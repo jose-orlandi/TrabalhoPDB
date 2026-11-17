@@ -1,0 +1,27 @@
+# Arquivos do R que nao devem ir pro repositorio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# NUNCA versionar: pode conter senha / token / chave de API
+.Renviron
+.Rprofile
+*.env
+.env
+secrets*
+*token*
+*senha*
+
+# pdfs dos artigos (o script 01 baixa de novo)
+pdfs/
+*.pdf
+
+# temporarios
+*.tmp
+~$*
+
+# Sistema
+Thumbs.db
+desktop.ini
