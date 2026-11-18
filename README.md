@@ -26,8 +26,9 @@ busca as informações de cada estrutura no PDB e guarda tudo num banco SQL.
 Critério (`R/00_selecionar_artigos.R`): busca na Europe PMC por `JOURNAL + OPEN_ACCESS:y + ACCESSION_TYPE:pdb`,
 do mais novo pro mais antigo (na mesma data, o de PMID mais novo primeiro), e fica com os 10 primeiros de cada
 revista que tenham pelo menos 3 códigos PDB diferentes segundo a Europe PMC. Não tira nada à mão: artigo de RNA,
-DNA ou mineral entra também, e na análise dá pra separar pela `classificacao` da estrutura.
-Como a busca sempre pega os mais recentes, a lista muda cada vez que o script roda.
+DNA ou mineral entra também, e na análise dá pra separar pela `classificacao` da estrutura e pelas `entidades`
+(estrutura sem proteína não tem linha em `entidades.csv`). Como a busca sempre pega os mais recentes, a lista muda
+cada vez que o script roda.
 A lista está em `dados/artigos_selecionados.csv`.
 
 ## Como rodar
@@ -38,7 +39,7 @@ Rodar da pasta do projeto, na ordem:
 source("R/00_selecionar_artigos.R") # atualiza dados/artigos_selecionados.csv com os artigos mais recentes
 source("R/01_baixar_pdfs.R")   # baixa os pdfs pra pasta pdfs/ (fica fora do git)
 source("R/02_extrair_pdb.R")   # gera saida/mencoes_pdb.csv
-source("R/03_scraping_pdb.R")  # gera saida/estruturas.csv e saida/codigos_nao_encontrados.csv
+source("R/03_scraping_pdb.R")  # gera saida/estruturas.csv, saida/entidades.csv e saida/codigos_nao_encontrados.csv
 ```
 
 Pacotes: `tidyverse`, `jsonlite`, `pdftools`, `rvest`.
@@ -70,6 +71,19 @@ e pega pelo `id` do elemento:
 | `massa_kda` | `#contentStructureWeight` |
 | `n_cadeias` | texto "Unique protein chains:" (cadeias proteicas **únicas**, não o total) |
 | `doi_estrutura` | `#pubmedDOI`, DOI da publicação original da estrutura |
+
+Da mesma página sai também `saida/entidades.csv`, com uma linha por proteína da estrutura (cada tabela
+`#table_macromolecule-protein-entityId-N`). Uma estrutura da spike com um anticorpo, por exemplo, vira 3 linhas.
+Serve pra juntar estruturas diferentes da mesma proteína e ver quais proteínas aparecem em mais artigos.
+
+| Coluna | De onde vem |
+|---|---|
+| `entidade` | número da entidade na estrutura (o `N` do id da tabela) |
+| `molecula` | coluna "Molecule" |
+| `organismo` | coluna "Organism" (pode ser diferente do organismo da estrutura, ex.: anticorpo sintético) |
+| `uniprot` | link pro uniprot.org; NA quando não tem (anticorpo, construção sintética), separado por `;` se tiver mais de um |
+| `gene` | "Gene Names:" nos detalhes |
+| `ec` | "EC:" nos detalhes, classe da enzima; NA se não for enzima |
 
 Coleta responsável: 2 s entre uma página e outra, e o script só busca o que ainda não está em
 `estruturas.csv` nem em `codigos_nao_encontrados.csv`. Código que dá 404 (lixo da extração, tipo `207A`)
