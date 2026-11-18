@@ -51,9 +51,10 @@ Pacotes: `tidyverse`, `jsonlite`, `pdftools`, `rvest`.
 - na IUCrJ o bloco "PDB references: ... Supporting information" do resumo conta inteiro
 - tira ordinal (2nd, 3rd) e unidade (10mJ, 100ms)
 
-Comparando com a mineração de texto da Europe PMC: 170 códigos em comum, 8 que só a gente achou
-(alguns são códigos reais, outros são lixo tipo `207A`, que vão cair quando a busca no PDB não achar nada)
-e 16 que a gente perdeu (código em figura ou em linha de tabela longe do cabeçalho).
+Comparando com a mineração de texto da Europe PMC (seleção de 18/11/2026): 114 códigos em comum, 12 que só a gente
+achou (alguns são códigos reais, outros são lixo tipo `20AD` do equipamento "LC-20AD" ou `600S` de "600 s", que caem
+quando a busca no PDB não acha nada) e 23 que a gente perdeu (código em figura ou em linha de tabela longe do cabeçalho;
+11 deles num artigo só, o `PMC13324649`).
 
 ## Scraping no PDB
 
@@ -90,7 +91,15 @@ Coleta responsável: 2 s entre uma página e outra, e o script só busca o que a
 ou que existe mas ainda não foi liberado (o `25CN` cai em `/structure/unreleased/`, com a página sem título)
 vai para `codigos_nao_encontrados.csv` e não é buscado de novo.
 
-Resultado: 177 códigos únicos → 174 estruturas e 3 não encontrados (`136B`, `207A`, `25CN`).
-A resolução só fica NA nas 10 de NMR em solução. 4 estruturas não têm DOI de publicação e 1 não tem organismo.
+Resultado da seleção de 18/11/2026: 123 códigos únicos → 120 estruturas e 3 não encontrados (`20AD`, `600S`, `18NZ`).
+83 de raio X, 33 de crio-ME, 3 de cristalografia de elétrons e 1 sem método (`5WH0`, que não foi liberado mas tem título).
+3 códigos aparecem em mais de um artigo (`7BH3`, `9TO1`, `9TO5`) e 30 estruturas foram depositadas pelo próprio artigo.
+As 120 estruturas têm 199 entidades, 185 delas com UniProt, que dão 102 proteínas diferentes. 2 proteínas aparecem
+em mais de um artigo (beta-lactamase CTX-M-15 `G3G192` e integrina alfa-M `P11215`) e várias aparecem em muitas
+estruturas do mesmo artigo (11 da CTX-M-15, 10 da L-asparaginase 2, 7 da spike). 2 estruturas não têm entidade de
+proteína (o `9YRD`, que é RNA, e o `5WH0`).
+
+`estruturas.csv`, `entidades.csv` e `codigos_nao_encontrados.csv` não apagam nada das seleções antigas, então para
+analisar só a seleção atual tem que cruzar com `mencoes_pdb.csv`.
 
 A página do RCSB já vem pronta no HTML, então aqui dá para usar `read_html()` direto, sem `chromote`.

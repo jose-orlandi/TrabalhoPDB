@@ -1,0 +1,200 @@
+"codigo_pdb","entidade","molecula","organismo","uniprot","gene","ec"
+"4HBT","1","Beta-lactamase","Escherichia coli","Q9EXV5","blaUOE-1, bla, bla CTX-M-15, blaCTX-M-15, blaCTX-M15, CTX-M-15","3.5.2.6"
+"7BH3","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"7BH6","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9RYD","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TO1","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TO5","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"6VXX","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"6VYB","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"6X2B","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"7MJH","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"7MJH","2","VH ab8","synthetic construct",NA,NA,NA
+"7MJJ","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"7MJJ","2","Fab ab1 Heavy Chain","synthetic construct",NA,NA,NA
+"7MJJ","3","Fab ab1 Light Chain","synthetic construct",NA,NA,NA
+"7SY1","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"7SY1","2","Processed angiotensin-converting enzyme 2","Homo sapiens","Q9BYF1","ACE2, UNQ868/PRO1885","3.4.17"
+"7SY2","1","Spike glycoprotein","Severe acute respiratory syndrome coronavirus 2","P0DTC2","S, 2",NA
+"7SY2","2","Processed angiotensin-converting enzyme 2","Homo sapiens","Q9BYF1","ACE2, UNQ868/PRO1885","3.4.17"
+"7ACY","1","S-layer protein","Clostridioides difficile 630","Q183M8",NA,NA
+"7ACY","2","S-layer protein","Clostridioides difficile 630","Q183M8",NA,NA
+"8V3T","1","Sheath (CD1363)","Clostridioides difficile","A0A9Q7ZU73","SAMEA3375112_00264",NA
+"8V3T","2","Tube (CD1364)","Clostridioides difficile","A0A031WFC4","xkdM",NA
+"8V3T","3","Collar (CD1362)","Clostridioides difficile","A0A1X9JZ99","rtbA",NA
+"8V3X","1","Sheath (CD1363)","Clostridioides difficile","A0A9Q7ZU73","SAMEA3375112_00264",NA
+"8V3X","2","Tube (CD1364)","Clostridioides difficile","A0A031WFC4","xkdM",NA
+"9GB6","1","Phage tail sheath protein","Clostridioides difficile","A0A9X8RMY4",NA,NA
+"9GB7","1","gp56 - Tail tube protein","Clostridioides difficile","A0A9X8RMX9",NA,NA
+"9GB7","2","gp51 - Neck valve protein","Clostridioides difficile","A0A9X8WSH7",NA,NA
+"9GB7","3","gp53 - Tail adaptor protein","Clostridioides difficile","A0A9X8WSH1",NA,NA
+"9GB7","4","gp50 - Portal adaptor protein","Clostridioides difficile","A0A9X8WSI0",NA,NA
+"9GB7","5","gp55 - Tail sheath protein","Clostridioides difficile","A0A9X8RMY4",NA,NA
+"9GB7","6","gp45 - Portal protein","Clostridioides difficile","A0A9X8RMZ9",NA,NA
+"30GD","1","Isoform 1 of Methionine adenosyltransferase 2 subunit beta","Homo sapiens","Q9NZL9","MAT2B, TGR, MSTP045, Nbla02999, UNQ2435/PRO4995",NA
+"30GD","2","S-adenosylmethionine synthase isoform type-2","Homo sapiens","P31153","MAT2A, AMS2, MATA2","2.5.1.6"
+"30GH","1","S-adenosylmethionine synthase isoform type-2","Homo sapiens","P31153","MAT2A, AMS2, MATA2","2.5.1.6"
+"30GH","2","Isoform 1 of Methionine adenosyltransferase 2 subunit beta","Homo sapiens","Q9NZL9","MAT2B, TGR, MSTP045, Nbla02999, UNQ2435/PRO4995",NA
+"4NDN","1","S-adenosylmethionine synthase isoform type-2","Homo sapiens","P31153","MAT2A, AMS2, MATA2","2.5.1.6"
+"4NDN","2","Methionine adenosyltransferase 2 subunit beta","Homo sapiens","Q9NZL9","MAT2B, TGR, MSTP045, Nbla02999, UNQ2435/PRO4995",NA
+"6FAJ","1","S-adenosylmethionine synthase isoform type-2","Homo sapiens","P31153","MAT2A, AMS2, MATA2","2.5.1.6"
+"9QPO","1","S-adenosylmethionine synthase isoform type-2","Homo sapiens","P31153","MAT2A, AMS2, MATA2","2.5.1.6"
+"9QPO","2","Isoform 2 of Methionine adenosyltransferase 2 subunit beta","Homo sapiens","Q9NZL9","MAT2B, TGR, MSTP045, Nbla02999, UNQ2435/PRO4995",NA
+"9QPP","1","S-adenosylmethionine synthase isoform type-2","Homo sapiens","P31153","MAT2A, AMS2, MATA2","2.5.1.6"
+"9QPP","2","Isoform 1 of Methionine adenosyltransferase 2 subunit beta","Homo sapiens","Q9NZL9","MAT2B, TGR, MSTP045, Nbla02999, UNQ2435/PRO4995",NA
+"3CF3","1","Transitional endoplasmic reticulum ATPase","Mus musculus","Q01853","Vcp","3.6.4.6"
+"6MZB","1","Rod cGMP-specific 3',5'-cyclic phosphodiesterase subunit beta","Bos taurus","P23439","PDE6B, PDEB","3.1.4.35"
+"6MZB","2","Rod cGMP-specific 3',5'-cyclic phosphodiesterase subunit alpha","Bos taurus","P11541","PDE6A, PDEA","3.1.4.35"
+"6MZB","3","Retinal rod rhodopsin-sensitive cGMP 3',5'-cyclic phosphodiesterase subunit gamma","Bos taurus","P04972","PDE6G, PDEG","3.1.4.35"
+"7RLI","1","Transitional endoplasmic reticulum ATPase","Homo sapiens","P55072","VCP","3.6.4.6"
+"9OHM","1","Rod cGMP-specific 3',5'-cyclic phosphodiesterase subunit alpha","Bos taurus","P11541","PDE6A, PDEA","3.1.4.35"
+"9OHM","2","Rod cGMP-specific 3',5'-cyclic phosphodiesterase subunit beta","Bos taurus","P23439","PDE6B, PDEB","3.1.4.35"
+"9OHM","3","Retinal rod rhodopsin-sensitive cGMP 3',5'-cyclic phosphodiesterase subunit gamma","Bos taurus","P04972","PDE6G, PDEG","3.1.4.35"
+"9OHN","1","Transitional endoplasmic reticulum ATPase","Homo sapiens","P55072","VCP","3.6.4.6"
+"3ZIY","1","COPPER-CONTAINING NITRITE REDUCTASE","Ralstonia pickettii 12J","B2UHR8",NA,"1.7.2.1"
+"7QQ2","1","Copper-containing nitrite reductase","Ralstonia pickettii","I6NAW4","RP6297_03937","1.7.2.1"
+"7R2U","1","Copper-containing nitrite reductase","Ralstonia pickettii","I6NAW4","RP6297_03937","1.7.2.1"
+"8QGF","1","Copper-containing nitrite reductase","Ralstonia pickettii","I6NAW4",NA,"1.7.2.1"
+"9FOM","1","Copper-containing nitrite reductase","Ralstonia pickettii","B2UHR8","nirK, D7S62_04310","1.7.2.1"
+"9FUH","1","Copper-containing nitrite reductase","Ralstonia pickettii","I6NAW4","nirK, D7S62_04310","1.7.2.1"
+"9FUI","1","Copper-containing nitrite reductase","Ralstonia pickettii","I6NAW4","nirK, D7S62_04310","1.7.2.1"
+"9FUJ","1","Copper-containing nitrite reductase","Ralstonia pickettii","I6NAW4","nirK, D7S62_04310","1.7.2.1"
+"9FUK","1","Copper-containing nitrite reductase","Ralstonia pickettii","B2UHR8","Rpic_4015","1.7.2.1"
+"6T3D","1","Beta-lactamase","Escherichia coli K-12","P00811","ampC, ampA, b4150, JW4111","3.5.2.6"
+"7BHK","1","Lysozyme","Gallus gallus","P00698",NA,"3.2.1.17"
+"9TOK","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TOL","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TOM","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TON","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TOO","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TOP","1","Beta-lactamase","Klebsiella pneumoniae","G3G192","blaCTX-M-15","3.5.2.6"
+"9TOQ","1","Lysozyme C","Gallus gallus","P00698",NA,"3.2.1.17"
+"9TOR","1","Lysozyme C","Gallus gallus","P00698",NA,"3.2.1.17"
+"9TOS","1","Lysozyme C","Gallus gallus","P00698",NA,"3.2.1.17"
+"9TOT","1","Lysozyme C","Gallus gallus","P00698",NA,"3.2.1.17"
+"9TOU","1","Beta-lactamase","Escherichia coli","P00811","ampC, ampA, b4150, JW4111","3.5.2.6"
+"9TOV","1","Beta-lactamase","Escherichia coli","P00811","ampC, ampA, b4150, JW4111","3.5.2.6"
+"9TOW","1","Beta-lactamase","Escherichia coli","P00811","ampC, ampA, b4150, JW4111","3.5.2.6"
+"1LDA","1","Glycerol uptake facilitator protein","Escherichia coli","P0AER0",NA,NA
+"2B6O","1","Lens fiber major intrinsic protein","Ovis aries","Q6J8I9",NA,NA
+"2D57","1","Aquaporin-4","Rattus norvegicus","P47863","Aqp4Membrane Entity: Yes",NA
+"2ZZ9","1","Aquaporin-4","Rattus norvegicus","P47863","Aqp4Membrane Entity: Yes",NA
+"7UZE","1","Aquaporin-1","Homo sapiens","P29972",NA,NA
+"8CTE","1","Ankyrin-1","Homo sapiens","P16157",NA,NA
+"8CTE","2","Band 3 anion transport protein","Homo sapiens","P02730",NA,NA
+"8CTE","3","Protein 4.2","Homo sapiens","P16452",NA,NA
+"8CTE","4","Blood group Rh(CE) polypeptide","Homo sapiens","P18577",NA,NA
+"8CTE","5","Ammonium transporter Rh type A","Homo sapiens","Q02094",NA,NA
+"8CTE","6","Glycophorin-A","Homo sapiens","P02724",NA,NA
+"8CTE","7","Aquaporin-1","Homo sapiens","P29972",NA,NA
+"8GCL","1","Aquaporin-2","Homo sapiens","P41181","AQP2Membrane Entity: Yes",NA
+"8UY6","1","Aquaporin Z","Escherichia coli","P60844","aqpZ, bniP, b0875, JW0859Membrane Entity: Yes",NA
+"8UY6","2","anti-ALFA nanobody","Vicugna pacos",NA,NA,NA
+"8Y8V","1","Green fluorescent protein,Aquaporin-7","Aequorea victoria,&nbspHomo sapiensThis entity is chimeric","O14520","GFP, AQP7, AQP7L, AQP9Membrane Entity: Yes",NA
+"9VXW","1","Aquaporin-11,sfGFP","Homo sapiens,&nbspAequorea victoriaThis entity is chimeric","Q8NBQ7","AQP11, AQPX1, PSEC0027, gfp",NA
+"6CXO","1","Complement component C9","Mus musculus","P06683","C9Membrane Entity: Yes",NA
+"6H04","1","Complement component C9","Homo sapiens","P02748",NA,NA
+"6H04","2","Complement C5,Complement C5","Homo sapiens","P01031",NA,NA
+"6H04","3","Complement component C8 beta chain","Homo sapiens","P07358",NA,NA
+"6H04","4","Complement component C7","Homo sapiens","P10643",NA,NA
+"6H04","5","Complement component C8 gamma chain","Homo sapiens","P07360",NA,NA
+"6H04","6","Complement component C8 alpha chain","Homo sapiens","P07357",NA,NA
+"6H04","7","Complement component C6","Homo sapiens","P13671",NA,NA
+"7NYD","1","Complement component C8 beta chain","Homo sapiens","P07358",NA,NA
+"7NYD","2","Complement component C8 alpha chain","Homo sapiens","P07357",NA,NA
+"7NYD","3","Complement component C9","Homo sapiens","P02748",NA,NA
+"7NYD","4","Complement component C7","Homo sapiens","P10643",NA,NA
+"7NYD","5","Complement component C6","Homo sapiens","P13671",NA,NA
+"7NYD","6","Complement component C8 gamma chain","Homo sapiens","P07360",NA,NA
+"7NYD","7","Complement C5","Homo sapiens","P01031",NA,NA
+"2ZAL","1","L-asparaginase","Escherichia coli K-12","P37595","ybiK (iaaA)","3.4.19.5"
+"2ZAL","2","L-asparaginase","Escherichia coli K-12","P37595","ybiK (iaaA)","3.4.19.5"
+"3ECA","1","L-asparaginase 2","Escherichia coli","P00805",NA,"3.5.1.1"
+"4ECA","1","L-ASPARAGINE AMIDOHYDROLASE","Escherichia coli K-12","P00805","ANSB","3.5.1.1"
+"4O0H","1","Isoaspartyl peptidase/L-asparaginase","Homo sapiens","Q7L266","ASRGL1, ALP, CRASH","3.4.19.5"
+"5F52","1","L-asparaginase","Dickeya chrysanthemi","P06608","ansB, asn","3.5.1.1"
+"5HW0","1","L-asparaginase","Dickeya chrysanthemi","P06608","ansB, asn","3.5.1.1"
+"6PA3","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6PA8","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6RUE","1","L-asparaginase","Wolinella succinogenes DSM 1740","P50286","ansA, ansB, WS0660","3.5.1.1"
+"6RUE","2","L-asparaginase","Wolinella succinogenes DSM 1740","P50286","ansA, ansB, WS0660","3.5.1.1"
+"6RUE","3","L-asparaginase","Wolinella succinogenes DSM 1740","P50286","ansA, ansB, WS0660","3.5.1.1"
+"6RUE","4","L-asparaginase","Wolinella succinogenes DSM 1740","P50286","ansA, ansB, WS0660","3.5.1.1"
+"6V24","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V24","2","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V25","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V25","2","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V27","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V28","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V2C","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6V2G","1","L-asparaginase 2","Escherichia coli K-12","P00805","ansB, b2957, JW2924","3.5.1.1"
+"6WYY","1","Glutaminase-asparaginase","Pseudomonas putida KT2440","Q88K39","ansB, PP_2453","3.5.1.38"
+"8C0I","1","Isoaspartyl peptidase subunit alpha","Escherichia coli","P37595","iaaA, spt, ybiK, b0828, JW0812","3.4.19.5"
+"8C0I","2","Isoaspartyl peptidase subunit beta","Escherichia coli","P37595","iaaA, spt, ybiK, b0828, JW0812","3.4.19.5"
+"8C0I","3","Isoaspartyl peptidase subunit beta","Escherichia coli","P37595","iaaA, spt, ybiK, b0828, JW0812","3.4.19.5"
+"9G66","1","L-asparaginase II protein","Rhizobium etli","Q2K0Z2","ansA, RHE_PE00350",NA
+"9SDK","1","L-asparaginase II protein","Rhizobium etli","Q2K0Z2","ansA, RHE_PE00350",NA
+"4PTV","1","Glycoside hydrolase family 1","Halothermothrix orenii H 168","B8CYA8","bgla, Hore_15280","3.2.1.21"
+"5DT5","1","Beta-glucosidase","Exiguobacterium antarcticum B7","A0ABF7PFW8","bglA, Eab7_0297","3.2.1.21"
+"9UPT","1","Beta-glucosidase A","Acetivibrio thermocellus ATCC 27405","P26208","bglA, Cthe_0212","3.2.1.21"
+"6AJG","1","Drug exporters of the RND superfamily-like protein,Endolysin","Mycolicibacterium smegmatis MC2 155,&nbspTequatrovirus T4This entity is chimeric","A0QP27;D9IEF7","mmpL3, MSMEI_0243, e, T4Tp126","3.2.1.17"
+"7N6B","1","MmpL3 transporter","Mycolicibacterium smegmatis MC2 155","A0QP27","mmpL3, MSMEI_0243Membrane Entity: Yes",NA
+"7NVH","1","Trehalose monomycolate exporter MmpL3","Mycobacterium tuberculosis","P9WJV5","mmpL3, Rv0206c, MTCY08D5.01c, MTV033.14cMembrane Entity: Yes",NA
+"2C6U","1","CLEC1B PROTEIN","Homo sapiens","Q9P126",NA,NA
+"1N8Z","1","Herceptin Fab (antibody) - light chain","Mus musculus,&nbspHomo sapiensThis entity is chimeric",NA,NA,NA
+"1N8Z","2","Herceptin Fab (antibody) - heavy chain","Mus musculus,&nbspHomo sapiensThis entity is chimeric",NA,NA,NA
+"1N8Z","3","Receptor protein-tyrosine kinase erbB-2","Homo sapiens","P04626","HER2(erbB2)","2.7.1.112"
+"3Q3G","1","Antibody Light Chain","Mus musculus",NA,NA,NA
+"3Q3G","2","Antibody Heavy chain","Mus musculus",NA,NA,NA
+"3Q3G","3","Integrin alpha-M","Homo sapiens","P11215","ITGAM, CD11B, CR3A",NA
+"4K24","1","Urokinase-type plasminogen activator","Homo sapiens","P00749","PLAU","3.4.21.73"
+"4K24","2","Vitronectin","Homo sapiens","P04004","VTN",NA
+"4K24","3","anti-uPAR antibody, heavy chain","Mus musculus",NA,NA,NA
+"4K24","4","anti-uPAR antibody, light chain","Mus musculus",NA,NA,NA
+"4K24","5","Urokinase plasminogen activator surface receptor","Homo sapiens","Q03405","MO3, PLAUR, UPAR",NA
+"5CZV","1","Neurogenic locus notch homolog protein 3","Homo sapiens","Q9UM47","NOTCH3",NA
+"5CZV","2","Fab 20350 heavy chain","Homo sapiens",NA,NA,NA
+"5CZV","3","Fab 20350 light chain","Homo sapiens",NA,NA,NA
+"5KN5","1","Epiregulin Antibody LY3016859 Fab Heavy Chain","Homo sapiens",NA,NA,NA
+"5KN5","2","Epiregulin Antibody LY3016859 Fab Light Chain","Homo sapiens",NA,NA,NA
+"5KN5","3","Protransforming growth factor alpha","Homo sapiens","P01135",NA,NA
+"1HIB","1","INTERLEUKIN-1 BETA","Homo sapiens","P01584",NA,NA
+"1NA5","1","Integrin alpha-M","Homo sapiens","P11215","ITGAM OR CR3A OR CD11B",NA
+"3SHI","1","Interstitial collagenase","Homo sapiens","P03956","MMP1, CLG","3.4.24.7"
+"4O2B","1","Tubulin alpha-1B chain","Bos taurus","P81947",NA,"3.6.5"
+"4O2B","2","Tubulin beta-2B chain","Bos taurus","Q6B856",NA,NA
+"4O2B","3","Stathmin-4","Rattus norvegicus","P63043","Stmn4",NA
+"4O2B","4","Tubulin-tyrosine ligase","Gallus gallus","A0A8V0Z8P0","TTL","6.3.2.25"
+"5CA1","1","Tubulin alpha","Sus barbatus","A0A0R4I993",NA,NA
+"5CA1","2","Tubulin beta-2 chain","Gallus gallus","P32882",NA,NA
+"5CA1","3","Stathmin-4","Rattus norvegicus","P63043","Stmn4",NA
+"5CA1","4","Uncharacterized protein","Gallus gallus","A0A8V0Z8P0","TTL","6.3.2.25"
+"5IJ0","1","Tubulin alpha-1B chain","Homo sapiens","P68363","TUBA1B","3.6.5"
+"5IJ0","2","Tubulin beta-3 chain","Homo sapiens","Q13509","TUBB3, TUBB4",NA
+"6E7B","1","Tubulin beta-3 chain","Homo sapiens","Q13509","TUBB3, TUBB4",NA
+"6E7B","2","Tubulin alpha-1B chain","Homo sapiens","P68363","TUBA1B","3.6.5"
+"2YCF","1","SERINE/THREONINE-PROTEIN KINASE CHK2","Homo sapiens","O96017",NA,"2.7.11.1"
+"6AB2","1","Pyrrolysine--tRNA ligase","Methanosarcina mazei JCM 9314","Q8PWY1","pylS","6.1.1.26"
+"7LMD","1","3C-like proteinase","Severe acute respiratory syndrome coronavirus 2","P0DTD1","rep, 1a-1b","3.4.22.69"
+"9I1S","1","Helicase nsp13","Severe acute respiratory syndrome coronavirus 2","P0DTD1","rep, 1a-1b","3.6.4.12"
+"6VZG","1","Actin-related protein 7","Saccharomyces cerevisiae S288C","Q12406","ARP7, SWP61, YPR034W, YP9367.14",NA
+"6VZG","2","Actin-like protein ARP9","Saccharomyces cerevisiae","Q05123","ARP9",NA
+"6VZG","3","Nuclear protein STH1/NPS1","Saccharomyces cerevisiae S288C","P32597","STH1, NPS1, YIL126W","3.6.4.12"
+"6VZG","4","Regulator of Ty1 transposition protein 102","Saccharomyces cerevisiae S288C","P53330","RTT102, YGR275W, G9378",NA
+"6YGD","1","N-alpha-acetyltransferase 30","Saccharomyces cerevisiae","Q03503","MAK3, NAA30, YPR051W, YP9499.08","2.3.1.256"
+"6YGD","2","N-alpha-acetyltransferase 35, NatC auxiliary subunit","Saccharomyces cerevisiae","Q02197","MAK10, NAA35, YEL053C",NA
+"6YGD","3","N-alpha-acetyltransferase 38, NatC auxiliary subunit","Saccharomyces cerevisiae","P23059","MAK31, NAA38, YCR020C-A, YCR20C-A",NA
+"6YGD","4","Major capsid protein","Saccharomyces cerevisiae virus L-A","P32503",NA,NA
+"8EKI","1","Protein transport protein SEC20","Saccharomyces cerevisiae S288C","P28791","SEC20, YDR498C, D9719.4",NA
+"8EKI","2","Protein transport protein USE1","Saccharomyces cerevisiae S288C","P53146","USE1, SLT1, YGL098W",NA
+"8EKI","3","Protein transport protein TIP20","Saccharomyces cerevisiae S288C","P33891","TIP20, TIP1, YGL145W",NA
+"8EKI","4","Protein transport protein SEC39","Saccharomyces cerevisiae S288C","Q12745","SEC39, DSL3, YLR440C",NA
+"8EKI","5","Protein transport protein DSL1","Saccharomyces cerevisiae S288C","P53847","DSL1, YNL258C, N0842",NA
+"1A01","1","HEMOGLOBIN (ALPHA CHAIN)","Homo sapiens","P69905","HUMAN BETA GLOBIN",NA
+"1A01","2","HEMOGLOBIN (BETA CHAIN)","Homo sapiens","P68871","HUMAN BETA GLOBIN",NA
+"1A2J","1","DISULFIDE BOND FORMATION PROTEIN","Escherichia coli","P0AEG4",NA,NA
+"1EDG","1","ENDOGLUCANASE A","Ruminiclostridium cellulolyticum H10","P17901","CELCCA","3.2.1.4"
+"1TAQ","1","TAQ DNA POLYMERASE","Thermus aquaticus","P19821","TAQ","2.7.7.7"
+"1UA7","1","Alpha-amylase","Bacillus subtilis","P00691",NA,"3.2.1.1"
+"2PPN","1","FK506-binding protein 1A","Homo sapiens","P62942","FKBP1A, FKBP1, FKBP12","5.2.1.8"
+"9PAP","1","PAPAIN","Carica papaya","P00784",NA,"3.4.22.2"
