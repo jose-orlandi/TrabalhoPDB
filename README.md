@@ -133,3 +133,9 @@ não foi buscado.
 Pra rodar precisa do PostgreSQL instalado (`sudo apt install postgresql libpq-dev`), uma senha pro usuário
 `postgres` (`sudo -u postgres psql -c "\password postgres"`) e o banco criado (`sudo -u postgres createdb pdb_pipeline`).
 Depois copiar `.Renviron.exemplo` pra `.Renviron` na pasta do projeto e colocar a senha. O `.Renviron` fica fora do git.
+
+Consultas de exemplo em `sql/02_consultas.sql` (dá pra rodar no DBeaver ou com `dbGetQuery`): estruturas e método
+por revista, proteínas citadas em mais artigos, estrutura depositada pelo próprio artigo ou reaproveitada (comparando
+os DOI com `LOWER`, porque o do artigo vem minúsculo e o do PDB maiúsculo), idade da estrutura quando foi citada e a
+fila de coleta. Na seleção de 18/11/2026 a IUCrJ cita estruturas com 5,7 anos em média e deposita 30 das 89 que cita;
+a PLoS cita estruturas com 15,3 anos em média e não deposita nenhuma.
