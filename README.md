@@ -18,26 +18,30 @@ busca as informações de cada estrutura no PDB e guarda tudo num banco SQL.
 
 ## Artigos
 
-20 artigos de acesso aberto de 2025, 10 de cada revista:
+20 artigos de acesso aberto, os 10 mais recentes de cada revista (`n_por_revista` no script):
 
 - **IUCrJ**: experimental, quase sempre deposita estrutura nova
 - **PLoS Computational Biology**: computacional, normalmente reaproveita estruturas que já existem
 
-Critério: busca na Europe PMC por `JOURNAL + OPEN_ACCESS:y + PUB_YEAR:2025 + ACCESSION_TYPE:pdb`,
-só artigo de proteína (tirei os de mineral, cristal orgânico e só RNA/DNA), pelo menos 3 códigos PDB
-segundo a Europe PMC, e os 10 mais recentes de cada revista. A lista está em `dados/artigos_selecionados.csv`.
+Critério (`R/00_selecionar_artigos.R`): busca na Europe PMC por `JOURNAL + OPEN_ACCESS:y + ACCESSION_TYPE:pdb`,
+do mais novo pro mais antigo (na mesma data, o de PMID mais novo primeiro), e fica com os 10 primeiros de cada
+revista que tenham pelo menos 3 códigos PDB diferentes segundo a Europe PMC. Não tira nada à mão: artigo de RNA,
+DNA ou mineral entra também, e na análise dá pra separar pela `classificacao` da estrutura.
+Como a busca sempre pega os mais recentes, a lista muda cada vez que o script roda.
+A lista está em `dados/artigos_selecionados.csv`.
 
 ## Como rodar
 
 Rodar da pasta do projeto, na ordem:
 
 ```r
+source("R/00_selecionar_artigos.R") # atualiza dados/artigos_selecionados.csv com os artigos mais recentes
 source("R/01_baixar_pdfs.R")   # baixa os pdfs pra pasta pdfs/ (fica fora do git)
 source("R/02_extrair_pdb.R")   # gera saida/mencoes_pdb.csv
 source("R/03_scraping_pdb.R")  # gera saida/estruturas.csv e saida/codigos_nao_encontrados.csv
 ```
 
-Pacotes: `tidyverse`, `pdftools`, `rvest`.
+Pacotes: `tidyverse`, `jsonlite`, `pdftools`, `rvest`.
 
 ## Extração dos códigos
 
