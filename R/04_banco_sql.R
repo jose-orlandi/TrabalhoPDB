@@ -41,7 +41,9 @@ escreve <- function(df, tabela) {
 artigos <- read.csv("dados/artigos_selecionados.csv")
 mencoes <- read.csv("saida/mencoes_pdb.csv")
 estruturas <- read.csv("saida/estruturas.csv", colClasses = c(data_deposito = "Date"))
-nao_achou <- read.csv("saida/codigos_nao_encontrados.csv")
+# o 03 so cria esse arquivo se algum codigo deu 404
+nao_achou <- tibble(codigo_pdb = character())
+if (file.exists("saida/codigos_nao_encontrados.csv")) nao_achou <- read.csv("saida/codigos_nao_encontrados.csv")
 entidades <- read.csv("saida/entidades.csv", colClasses = "character")
 
 #? revistas e artigos

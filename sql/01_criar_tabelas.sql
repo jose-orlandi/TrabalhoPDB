@@ -1,6 +1,9 @@
 -- banco do pipeline: revistas, artigos, mencoes, estruturas e as proteinas de cada estrutura
 -- o banco sai inteiro dos csv, entao o script 04 apaga o schema e monta de novo toda vez
 
+-- sem isso o postgres avisa cada tabela que o DROP apaga
+SET client_min_messages = warning;
+
 DROP SCHEMA IF EXISTS pdb CASCADE;
 
 CREATE SCHEMA pdb;
