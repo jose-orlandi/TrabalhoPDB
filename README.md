@@ -10,54 +10,19 @@ O PDB diz quais estruturas existem, mas não quais estão sendo estudadas. As ci
 que proteínas, organismos e métodos a comunidade está usando agora, e quanto ela reaproveita estrutura que já
 existe. Como a seleção sempre pega os artigos mais novos, cada rodada é uma foto atualizada do campo.
 
-## Como funciona
-
-```
-Europe PMC ──00──> dados/artigos_selecionados.csv
-                         │
-PMC (AWS) ───01──> pdfs/ (fora do git)
-                         │
-             ──02──> saida/mencoes_pdb.csv
-                         │
-RCSB PDB ────03──> saida/estruturas.csv + saida/entidades.csv + saida/codigos_nao_encontrados.csv
-                         │
-             ──04──> PostgreSQL, schema pdb
-```
-
-| Script | O que faz | Tempo (10 artigos por revista) |
-|---|---|---|
-| `R/00_selecionar_artigos.R` | escolhe os artigos mais recentes de cada revista na Europe PMC | 1 a 3 min |
-| `R/01_baixar_pdfs.R` | baixa os PDFs do PubMed Central | ~2 min (só baixa o que falta) |
-| `R/02_extrair_pdb.R` | lê os PDFs e acha os códigos PDB citados | segundos |
-| `R/03_scraping_pdb.R` | busca cada código no RCSB (estrutura e proteínas) | ~3 s por código novo |
-| `R/04_banco_sql.R` | monta o banco a partir dos csv | segundos |
-
-## Estrutura do repositório
-
-```
-R/                    scripts do pipeline, na ordem (00 a 04)
-sql/
-  01_criar_tabelas.sql  tabelas do banco
-  02_consultas.sql      consultas de exemplo
-dados/
-  artigos_selecionados.csv
-saida/
-  mencoes_pdb.csv               qual artigo cita qual código
-  estruturas.csv                uma linha por estrutura
-  entidades.csv                 uma linha por proteína de cada estrutura
-  codigos_nao_encontrados.csv   códigos que não existem no RCSB
-.Renviron.exemplo     modelo da configuração do banco
-```
-
 ## Divisão
 
-| Etapa | Quem |
-|---|---|
-| 1–2. Seleção dos artigos, download dos PDFs e extração dos códigos | Ricardo |
-| 3. Web scraping no PDB | Ricardo |
-| 4. Banco SQL | Pedro |
-| 5. Tratamento e integração das tabelas no tidyverse | Pedro |
-| Gráficos, relatório e apresentação | José Victor |
+| # | Tarefa | Quem |
+|---|---|---|
+| 1 | Seleção dos artigos | Ricardo |
+| 2 | Download dos PDFs | Ricardo |
+| 3 | Extração dos códigos | Ricardo |
+| 4 | Web scraping no PDB | Ricardo |
+| 5 | Banco SQL | Pedro |
+| 6 | Tratamento e integração das tabelas no tidyverse | Pedro |
+| 7 | Gráficos | José Victor |
+| 8 | Relatório | José Victor |
+| 9 | Apresentação | José Victor |
 
 ## Como rodar
 
@@ -200,22 +165,6 @@ não foi liberada, `NULL` ainda não foi buscada.
 `sql/02_consultas.sql` tem consultas prontas (dá pra rodar no DBeaver, no pgAdmin ou com `dbGetQuery`): estruturas
 e método por revista, proteínas citadas em mais artigos, estrutura depositada pelo próprio artigo ou reaproveitada,
 idade da estrutura quando foi citada e a fila de coleta.
-
-## Resultados da última rodada (18/11/2026)
-
-20 artigos (IUCrJ de mar a set/2026, PLoS de jul a out/2026).
-
-- **Códigos:** 123 únicos → 120 estruturas e 3 não encontrados (`20AD`, `600S`, `18NZ`). 3 códigos aparecem em mais
-  de um artigo (`7BH3`, `9TO1`, `9TO5`).
-- **Comparando com a Europe PMC:** 114 códigos em comum, 12 que só a gente achou (parte é lixo que cai no scraping)
-  e 23 que a gente perdeu (código em figura ou em linha de tabela longe do cabeçalho; 11 deles num artigo só).
-- **Métodos:** 83 de raio X, 33 de crio-ME e 3 de cristalografia de elétrons. Resolução média de 1,8 a 2,2 Å no
-  raio X e de 3,0 a 3,6 Å na crio-ME.
-- **Proteínas:** 199 entidades, 185 com UniProt, 102 proteínas diferentes. 2 aparecem em mais de um artigo
-  (beta-lactamase CTX-M-15 e integrina alfa-M), e várias aparecem em muitas estruturas do mesmo artigo (11 da CTX-M-15,
-  10 da L-asparaginase 2, 7 da spike do SARS-CoV-2).
-- **IUCrJ vs PLoS:** a IUCrJ cita estruturas com 5,7 anos em média e depositou 30 das 89 que cita; a PLoS cita
-  estruturas com 15,3 anos em média e não depositou nenhuma.
 
 ## Cuidados e limitações
 
