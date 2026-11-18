@@ -1,0 +1,7 @@
+# copiar este arquivo para .Renviron (na pasta do projeto) e colocar a senha do postgres
+# o .Renviron fica fora do git
+PG_HOST=localhost
+PG_PORT=5432
+PG_DB=pdb_pipeline
+PG_USER=postgres
+PG_PASSWORD=coloque_a_senha_aqui

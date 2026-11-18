@@ -9,6 +9,7 @@ site <- "https://www.rcsb.org/structure/"
 
 # so busca o que ainda nao foi buscado (depois isso vira consulta no banco)
 arq_estruturas <- "saida/estruturas.csv"
+arq_entidades <- "saida/entidades.csv"
 arq_nao_achou <- "saida/codigos_nao_encontrados.csv"
 
 ja_tem <- c()
@@ -23,6 +24,32 @@ pega_campo <- function(page, seletor) {
   x <- page %>% html_element(seletor) %>% html_text2()
   x <- gsub("&nbsp;?", " ", x)
   trimws(str_remove(x, "^[^:]*:"), "both")
+}
+
+# cada proteina da estrutura tem uma tabela "Entity ID" com molecula, organismo e link pro uniprot
+pega_entidades <- function(page, cod) {
+  # page <- read_html(paste0(site, "7MJJ")); cod <- "7MJJ"
+  tabelas <- page %>% html_elements("[id^='table_macromolecule-protein-entityId-']")
+
+  map(tabelas, function(tab) {
+    linhas <- html_table(tab, header = FALSE)
+    cab <- which(linhas[[1]] == "Molecule")[1]
+    if (is.na(cab)) return(NULL)
+    campos <- setNames(as.character(linhas[cab + 1, ]), as.character(linhas[cab, ]))
+    detalhes <- gsub("&nbsp;?", " ", campos["Details"])
+
+    # quimera ou anticorpo pode ter mais de um uniprot ou nenhum
+    uniprot <- tab %>% html_elements("a[href*='uniprot.org/uniprot/']") %>%
+      html_attr("href") %>% str_extract("[^/]+$") %>% unique()
+
+    tibble(codigo_pdb = cod,
+           entidade = as.integer(str_extract(html_attr(tab, "id"), "\\d+$")),
+           molecula = campos["Molecule"],
+           organismo = campos["Organism"],
+           uniprot = if (length(uniprot) > 0) paste(uniprot, collapse = ";") else NA,
+           gene = str_trim(str_match(detalhes, "Gene Names:\\s*(.*?)\\s*(EC:|$)")[, 2]),
+           ec = str_extract(detalhes, "(?<=EC:)\\s*[\\d.n-]+") %>% str_trim())
+  }) %>% list_rbind()
 }
 
 dados <- map(fila, function(cod) {
@@ -52,7 +79,8 @@ dados <- map(fila, function(cod) {
     data_deposito = str_extract(texto, "(?<=Deposited:)\\s*\\d{4}-\\d{2}-\\d{2}"),
     massa_kda = str_extract(pega_campo(page, "#contentStructureWeight"), "[\\d.,]+"),
     n_cadeias = str_extract(texto, "(?<=Unique protein chains: )\\d+"),
-    doi_estrutura = pega_campo(page, "#pubmedDOI")
+    doi_estrutura = pega_campo(page, "#pubmedDOI"),
+    entidades = list(pega_entidades(page, cod))
   )
 }) %>% list_rbind()
 
@@ -67,9 +95,16 @@ if (nrow(nao_achou) > 0) {
 
 # se a rodada so teve codigo que nao existe, nao tem coluna nenhuma pra arrumar
 if (any(dados$achou)) {
+  dados <- dados %>% filter(achou)
+
+  # uma linha por proteina de cada estrutura, vai pra outro arquivo
+  # tudo como texto pra juntar com o que ja tinha sem brigar por tipo (uniprot so NA vira logical)
+  entidades <- list_rbind(dados$entidades) %>% mutate(across(everything(), as.character))
+  if (file.exists(arq_entidades)) entidades <- bind_rows(read.csv(arq_entidades, colClasses = "character"), entidades)
+  if (nrow(entidades) > 0) write.csv(entidades, arq_entidades, row.names = FALSE)
+
   dados <- dados %>%
-    filter(achou) %>%
-    select(-achou) %>%
+    select(-achou, -entidades) %>%
     mutate(resolucao = as.numeric(str_extract(resolucao, "[\\d.]+")),
            massa_kda = as.numeric(gsub(",", "", massa_kda)),
            n_cadeias = as.integer(n_cadeias),
