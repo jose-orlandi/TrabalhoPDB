@@ -40,9 +40,10 @@ source("R/00_selecionar_artigos.R") # atualiza dados/artigos_selecionados.csv co
 source("R/01_baixar_pdfs.R")   # baixa os pdfs pra pasta pdfs/ (fica fora do git)
 source("R/02_extrair_pdb.R")   # gera saida/mencoes_pdb.csv
 source("R/03_scraping_pdb.R")  # gera saida/estruturas.csv, saida/entidades.csv e saida/codigos_nao_encontrados.csv
+source("R/04_banco_sql.R")     # carrega tudo no PostgreSQL (precisa configurar antes, ver "Banco SQL")
 ```
 
-Pacotes: `tidyverse`, `jsonlite`, `pdftools`, `rvest`.
+Pacotes: `tidyverse`, `jsonlite`, `pdftools`, `rvest`, `DBI`, `RPostgres`.
 
 ## Extração dos códigos
 
@@ -103,3 +104,32 @@ proteína (o `9YRD`, que é RNA, e o `5WH0`).
 analisar só a seleção atual tem que cruzar com `mencoes_pdb.csv`.
 
 A página do RCSB já vem pronta no HTML, então aqui dá para usar `read_html()` direto, sem `chromote`.
+
+## Banco SQL
+
+PostgreSQL, no schema `pdb`, seguindo o padrão da aula (`ref_` pra tabela de referência, `tab_` pra tabela de dados,
+id com `GENERATED ALWAYS AS IDENTITY` e chave estrangeira com `ALTER TABLE`). As tabelas estão em
+`sql/01_criar_tabelas.sql` e o `R/04_banco_sql.R` apaga o schema e monta de novo a partir dos csv, usando o
+`trocar_id()` da aula pra trocar o código pelo id da tabela de referência.
+
+```
+ref_revista ──< tab_artigo ──< tab_mencao >── tab_estrutura ──< tab_entidade ──< tab_entidade_uniprot >── ref_uniprot
+```
+
+| Tabela | O que guarda |
+|---|---|
+| `ref_revista` | as revistas |
+| `tab_artigo` | os artigos, ligados à revista |
+| `tab_mencao` | qual artigo cita qual estrutura, quantas vezes e o contexto |
+| `tab_estrutura` | uma linha por código PDB citado, com os campos do scraping |
+| `tab_entidade` | as proteínas de cada estrutura |
+| `ref_uniprot` | os códigos UniProt |
+| `tab_entidade_uniprot` | liga entidade e UniProt (proteína quimérica tem mais de um, anticorpo não tem nenhum) |
+
+A coluna `encontrada` de `tab_estrutura` faz o papel de fila de coleta: `TRUE` achou no RCSB, `FALSE` deu 404 ou
+não foi liberada (o `5WH0` passa no scraping com título mas sem método, então também fica `FALSE`) e `NULL` ainda
+não foi buscado.
+
+Pra rodar precisa do PostgreSQL instalado (`sudo apt install postgresql libpq-dev`), uma senha pro usuário
+`postgres` (`sudo -u postgres psql -c "\password postgres"`) e o banco criado (`sudo -u postgres createdb pdb_pipeline`).
+Depois copiar `.Renviron.exemplo` pra `.Renviron` na pasta do projeto e colocar a senha. O `.Renviron` fica fora do git.
